@@ -43,7 +43,6 @@ _TD.a.push(function (TD) {
 			 *
 			 */
 			this.type = cfg.type;
-
 			this.speed = cfg.speed;
 			this.bullet_speed = cfg.bullet_speed;
 			this.is_pre_building = !!cfg.is_pre_building;
@@ -54,7 +53,6 @@ _TD.a.push(function (TD) {
 			TD.lang.mix(this, o);
 			this.range_px = this.range * TD.grid_size;
 			this.money = this.cost; // Buy, upgrade this building has been spending money
-
 			this.caculatePos();
 		},
 

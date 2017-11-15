@@ -141,7 +141,7 @@ _TD.a.push(function (TD) {
 
 		},
 		render: function () {
-			// 画状态文字
+			//Details Properties
 			var ctx = TD.ctx;
 
 			ctx.textAlign = "left";
@@ -149,14 +149,14 @@ _TD.a.push(function (TD) {
 			ctx.fillStyle = "#000";
 			ctx.font = "normal " + (12 * _TD.retina) + "px 'Courier New'";
 			ctx.beginPath();
-			ctx.fillText(TD._t("panel_money_title") + TD.money, this.x, this.y);
-			ctx.fillText(TD._t("panel_score_title") + TD.score, this.x, this.y + 20 * _TD.retina);
-			ctx.fillText(TD._t("panel_life_title") + TD.life, this.x, this.y + 40 * _TD.retina);
+			ctx.fillText(TD._t("panel_money_title") + TD.money, this.x + 260 , this.y);
+			ctx.fillText(TD._t("panel_score_title") + TD.score, this.x + 260, this.y + 20 * _TD.retina);
+			ctx.fillText(TD._t("panel_life_title") + TD.life, this.x + 260, this.y + 40 * _TD.retina);
 			ctx.fillText(TD._t("panel_building_title") + this.map.buildings.length,
-				this.x, this.y + 60 * _TD.retina);
+				this.x + 260, this.y + 60 * _TD.retina);
 			ctx.fillText(TD._t("panel_monster_title") + this.map.monsters.length,
-				this.x, this.y + 80 * _TD.retina);
-			ctx.fillText(TD._t("wave_info", [this.scene.wave]), this.x, this.y + 210 * _TD.retina);
+				this.x + 260, this.y + 80 * _TD.retina);
+			ctx.fillText(TD._t("wave_info", [this.scene.wave]), this.x + 260, this.y + 210 * _TD.retina);
 			ctx.closePath();
 
 			if (this._life_recover_wait) {
@@ -175,7 +175,7 @@ _TD.a.push(function (TD) {
 			ctx.fillStyle = "#666";
 			ctx.font = "normal " + (12 * _TD.retina) + "px 'Courier New'";
 			ctx.beginPath();
-			ctx.fillText("version: " + TD.version + " | oldj.net", TD.stage.width - TD.padding,
+			ctx.fillText("version: 2.0.0", TD.stage.width - TD.padding,
 				TD.stage.height - TD.padding * 2);
 			ctx.closePath();
 
@@ -295,8 +295,7 @@ _TD.a.push(function (TD) {
 		return balloontip;
 	};
 
-	// button 对象的属性、方法。注意属性中不要有数组、对象等
-	// 引用属性，否则多个实例的相关属性会发生冲突
+	//Button Pause Properties
 	var button_obj = {
 		_init: function (cfg) {
 			cfg = cfg || {};
@@ -306,8 +305,8 @@ _TD.a.push(function (TD) {
 			this.y = cfg.y;
 			this.width = cfg.width || 80 * _TD.retina;
 			this.height = cfg.height || 30 * _TD.retina;
-			this.font_x = this.x + 8 * _TD.retina;
-			this.font_y = this.y + 9 * _TD.retina;
+			this.font_x = this.x + 282 * _TD.retina;
+			this.font_y = this.y + 7 * _TD.retina;
 			this.scene = cfg.scene;
 			this.desc = cfg.desc || "";
 
@@ -333,7 +332,7 @@ _TD.a.push(function (TD) {
 			ctx.fillStyle = this.is_hover ? "#eee" : "#ccc";
 			ctx.strokeStyle = "#999";
 			ctx.beginPath();
-			ctx.rect(this.x, this.y, this.width, this.height);
+			ctx.rect(this.x + 260, this.y, this.width, this.height);
 			ctx.closePath();
 			ctx.fill();
 			ctx.stroke();
