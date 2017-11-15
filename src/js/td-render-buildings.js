@@ -120,7 +120,7 @@ _TD.a.push(function (TD) {
 		"LMG": function (b, ctx, map, gs, gs2) {
 			var target_position = b.getTargetPosition();
 
-			ctx.fillStyle = "#36f";
+			ctx.fillStyle = "#36g";
 			ctx.strokeStyle = "#000";
 			ctx.beginPath();
 			ctx.lineWidth = _TD.retina;
@@ -138,14 +138,14 @@ _TD.a.push(function (TD) {
 			ctx.stroke();
 
 			ctx.lineWidth = _TD.retina;
-			ctx.fillStyle = "#66c";
+			ctx.fillStyle = "#66e";
 			ctx.beginPath();
 			ctx.arc(b.cx, b.cy, 5 * _TD.retina, 0, Math.PI * 2, true);
 			ctx.closePath();
 			ctx.fill();
 			ctx.stroke();
 
-			ctx.fillStyle = "#ccf";
+			ctx.fillStyle = "#ccg";
 			ctx.beginPath();
 			ctx.arc(b.cx + 1, b.cy - 1, 2 * _TD.retina, 0, Math.PI * 2, true);
 			ctx.closePath();
