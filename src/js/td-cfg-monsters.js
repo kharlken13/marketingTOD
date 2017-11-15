@@ -18,8 +18,8 @@ _TD.a.push(function (TD) {
 		if (!this.is_valid || !this.grid) return;
 		var ctx = TD.ctx;
 
-		// 画一个圆代表怪物
-		ctx.strokeStyle = "#000";
+		// Draw a circle representing the monster
+		ctx.strokeStyle = "#120";
 		ctx.lineWidth = 1;
 		ctx.fillStyle = this.color;
 		ctx.beginPath();
@@ -28,11 +28,11 @@ _TD.a.push(function (TD) {
 		ctx.fill();
 		ctx.stroke();
 
-		// 画怪物的生命值
+		//Draw the value of the monster's life
 		if (TD.show_monster_life) {
 			var s = Math.floor(TD.grid_size / 4),
 				l = s * 2 - 2 * _TD.retina;
-			ctx.fillStyle = "#000";
+			ctx.fillStyle = "#1";
 			ctx.beginPath();
 			ctx.fillRect(this.cx - s, this.cy - this.r - 6, s * 2, 4 * _TD.retina);
 			ctx.closePath();
@@ -54,91 +54,91 @@ _TD.a.push(function (TD) {
 			{
 				// idx: 0
 				name: "monster 1",
-				desc: "最弱小的怪物",
-				speed: 3,
+				desc: "The weakest monster",
+				speed: 5,
 				max_speed: 10,
-				life: 50,
+				life: 40,
 				damage: 1, // 到达终点后会带来多少点伤害（1 ~ 10）
 				shield: 0,
-				money: 5 // 消灭本怪物后可得多少金钱（可选）
+				money: 20 // 消灭本怪物后可得多少金钱（可选）
 			},
 			{
 				// idx: 1
 				name: "monster 2",
-				desc: "稍强一些的小怪",
+				desc: "Slightly stronger mobs",
 				speed: 6,
 				max_speed: 20,
-				life: 50,
+				life: 40,
 				damage: 2, // 到达终点后会带来多少点伤害（1 ~ 10）
 				shield: 1
 			},
 			{
 				// idx: 2
 				name: "monster speed",
-				desc: "速度较快的小怪",
-				speed: 12,
+				desc: "Fast mobs",
+				speed: 15,
 				max_speed: 30,
-				life: 50,
+				life: 40,
 				damage: 3, // 到达终点后会带来多少点伤害（1 ~ 10）
 				shield: 1
 			},
 			{
 				// idx: 3
 				name: "monster life",
-				desc: "生命值很强的小怪",
+				desc: "Strong value of life little mobs",
 				speed: 5,
 				max_speed: 10,
-				life: 500,
+				life: 600,
 				damage: 3, // 到达终点后会带来多少点伤害（1 ~ 10）
 				shield: 1
 			},
 			{
 				// idx: 4
 				name: "monster shield",
-				desc: "防御很强的小怪",
+				desc: "Strong defense of the mobs",
 				speed: 5,
 				max_speed: 10,
-				life: 50,
+				life: 40,
 				damage: 3, // 到达终点后会带来多少点伤害（1 ~ 10）
 				shield: 20
 			},
 			{
 				// idx: 5
 				name: "monster damage",
-				desc: "伤害值很大的小怪",
+				desc: "Damage a lot of small mobs",
 				speed: 7,
 				max_speed: 14,
-				life: 50,
-				damage: 10, // 到达终点后会带来多少点伤害（1 ~ 10）
+				life: 40,
+				damage: 15, // 到达终点后会带来多少点伤害（1 ~ 10）
 				shield: 2
 			},
 			{
 				// idx: 6
 				name: "monster speed-life",
-				desc: "速度、生命都较高的怪物",
+				desc: "Speed, life is higher monster",
 				speed: 15,
 				max_speed: 30,
-				life: 100,
+				life: 110,
 				damage: 3, // 到达终点后会带来多少点伤害（1 ~ 10）
 				shield: 3
 			},
 			{
 				// idx: 7
 				name: "monster speed-2",
-				desc: "速度很快的怪物",
-				speed: 30,
+				desc: "Fast monster",
+				speed: 40,
 				max_speed: 40,
-				life: 30,
+				life: 25,
 				damage: 4, // 到达终点后会带来多少点伤害（1 ~ 10）
 				shield: 1
 			},
 			{
 				// idx: 8
 				name: "monster shield-life",
-				desc: "防御很强、生命值很高的怪物",
+				desc: "Strong defense, high value of life monster",
 				speed: 3,
 				max_speed: 10,
-				life: 300,
+				life: 400,
 				damage: 5, // 到达终点后会带来多少点伤害（1 ~ 10）
 				shield: 15
 			}

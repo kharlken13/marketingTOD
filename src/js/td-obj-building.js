@@ -11,13 +11,13 @@
 // _TD.a.push begin
 _TD.a.push(function (TD) {
 
-	// building 对象的属性、方法。注意属性中不要有数组、对象等
-	// 引用属性，否则多个实例的相关属性会发生冲突
+	// building The object's properties, methods. Notice that there should be no array, object, etc. in the property
+	// Reference attributes, or multiple instances of the related properties will conflict
 	var building_obj = {
 		_init: function (cfg) {
 			this.is_selected = false;
 			this.level = 0;
-			this.killed = 0; // 当前建筑杀死了多少怪物
+			this.killed = 0; // How many monsters have been killed by the current building
 			this.target = null;
 
 			cfg = cfg || {};
@@ -25,20 +25,21 @@ _TD.a.push(function (TD) {
 			this.grid = cfg.grid || null;
 
 			/**
-			 * 子弹类型，可以有以下类型：
-			 *         1：普通子弹
-			 *         2：激光类，发射后马上命中，暂未实现
-			 *         3：导弹类，击中后会爆炸，带来面攻击，暂未实现
+			 * Bullet types can have the following types:
+			 *         1：Ordinary bullet
+			 *         2:Laser class, hit immediately after launch, yet to be realized
+			 *         3：Missiles, hit after the explosion, bringing the surface attack, yet to be achieved
 			 */
 			this.bullet_type = cfg.bullet_type || 1;
 
 			/**
-			 * type 可能的值有：
-			 *         "wall": 墙壁，没有攻击性
-			 *         "cannon": 炮台
-			 *         "LMG": 轻机枪
-			 *         "HMG": 重机枪
-			 *         "laser_gun": 激光枪
+			 * type Possible values ​​are：
+			 *         "wall": Wall, not aggressive
+			 *         "cannon": fort
+			 *         "LMG": Light machine gun
+			 *         "HMG": Heavy machine gun
+			 *         "laser_gun": Laser gun
+
 			 *
 			 */
 			this.type = cfg.type;
@@ -48,25 +49,24 @@ _TD.a.push(function (TD) {
 			this.is_pre_building = !!cfg.is_pre_building;
 			this.blink = this.is_pre_building;
 			this.wait_blink = this._default_wait_blink = 20;
-			this.is_weapon = (this.type != "wall"); // 墙等不可攻击的建筑此项为 false ，其余武器此项为 true
-
+			this.is_weapon = (this.type != "wall"); 
 			var o = TD.getDefaultBuildingAttributes(this.type);
 			TD.lang.mix(this, o);
 			this.range_px = this.range * TD.grid_size;
-			this.money = this.cost; // 购买、升级本建筑已花费的钱
+			this.money = this.cost; // Buy, upgrade this building has been spending money
 
 			this.caculatePos();
 		},
 
 		/**
-		 * 升级本建筑需要的花费
+		 * The cost of upgrading this building
 		 */
 		getUpgradeCost: function () {
 			return Math.floor(this.money * 0.75);
 		},
 
 		/**
-		 * 出售本建筑能得到多少钱
+		 * How much can I get for selling this building?
 		 */
 		getSellMoney: function () {
 			return Math.floor(this.money * 0.5) || 1;
@@ -146,8 +146,8 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 将本建筑放置到一个格子中
-		 * @param grid {Element} 指定格子
+		 * Place the building in a grid
+		 * @param grid {Element} Designated grid
 		 */
 		locate: function (grid) {
 			this.grid = grid;
@@ -171,7 +171,7 @@ _TD.a.push(function (TD) {
 		},
 
 		/**
-		 * 将本建筑彻底删除
+		 * The building completely removed
 		 */
 		remove: function () {
 //			TD.log("remove building #" + this.id + ".");
