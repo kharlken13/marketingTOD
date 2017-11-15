@@ -91,7 +91,7 @@ _TD.a.push(function (TD) {
 	TD.getDefaultStageData = function (k) {
 		var data = {
 			stage_main: {
-				width: 640 * _TD.retina, // px
+				width: 900 * _TD.retina, // px
 				height: 560 * _TD.retina,
 				init: _stage_main_init,
 				step2: _stage_main_step2
@@ -100,7 +100,7 @@ _TD.a.push(function (TD) {
 			scene_endless: {
 				// scene 1
 				map: {
-					grid_x: 16,
+					grid_x: 24,
 					grid_y: 16,
 					x: TD.padding,
 					y: TD.padding,
