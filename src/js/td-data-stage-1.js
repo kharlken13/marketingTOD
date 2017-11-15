@@ -113,6 +113,10 @@ _TD.a.push(function (TD) {
 							passable_flag: 0
 						},
 						{
+							pos: [9, 9],
+							passable_flag: 0
+						},
+						{
 							pos: [7, 15],
 							build_flag: 0
 						},
@@ -121,8 +125,101 @@ _TD.a.push(function (TD) {
 							building: "wall"
 						},
 						{
-							pos: [4, 13],
+							pos: [1, 0],
 							building: "wall"
+						},
+						{
+							pos: [1, 1],
+							building: "wall"
+						},
+						{
+							pos: [12, 1],
+							building: "wall",
+						},
+						{
+							pos: [12, 2],
+							building: "wall",
+						},
+						{
+							pos: [12, 3],
+							building: "wall",
+						},
+						{
+							pos: [12, 4],
+							building: "wall",
+						},
+						{
+							pos: [12, 5	],
+							building: "wall",
+						},
+						{
+							pos: [11, 5],
+							building: "wall",
+						},
+						{
+							pos: [10, 5],
+							building: "wall",
+						},
+						{
+							pos: [10, 4],
+							building: "wall",
+						},
+
+						{
+							pos: [14, 1],
+							building: "wall",
+						},
+
+						{
+							pos: [14, 2],
+							building: "wall",
+						},
+						{
+							pos: [14, 3],
+							building: "wall",
+						},
+							{
+							pos: [14, 4],
+							building: "wall",
+						},
+							{
+							pos: [14, 5],
+							building: "wall",
+						},
+
+							{
+							pos: [15, 3],
+							building: "wall",
+						},
+						{
+							pos: [16, 2],
+							building: "wall",
+						},
+						{
+							pos: [16, 4],
+							building: "wall",
+						},
+						{
+							pos: [17, 1],
+							building: "wall",
+						},
+						{
+							pos: [17, 5],
+							building: "wall",
+						},
+
+						{
+							pos: [6, 12],
+							building: "wall"
+						},
+						{
+							pos: [4, 14],
+							building: "wall"
+						},
+						{
+							pos: [20, 13],
+							building: "wall"
+
 							//}, {
 							//pos: [11, 9],
 							//building: "cannon"
