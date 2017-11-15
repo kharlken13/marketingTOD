@@ -46,6 +46,8 @@ _TD.a.push(function (TD) {
 			this.wait_new_wave = this.config.wait_new_wave;
 		},
 		_stage_main_step2 = function () {
+			//TD.log(this.current_act.current_scene.wave);
+
 			var scene = this.current_act.current_scene,
 				wave = scene.wave;
 			if ((wave == 0 && !this.map.has_weapon) || scene.state != 1) {
@@ -54,6 +56,9 @@ _TD.a.push(function (TD) {
 
 			if (this.map.monsters.length == 0) {
 				if (wave > 0 && this.wait_new_wave == this.config.wait_new_wave - 1) {
+					// 一波怪物刚刚走完
+					// 奖励生命值
+
 					var wave_reward = 0;
 					if (wave % 10 == 0) {
 						wave_reward = 10;
@@ -173,9 +178,9 @@ _TD.a.push(function (TD) {
 					max_wave: -1,
 					wave_damage: 0, // 当前一波怪物造成了多少点生命值的伤害
 					max_monsters_per_wave: 100, // 每一波最多多少怪物
-					money: 1000, //Default Money
-					score: 0, // Default Score
-					life: 50, // Default Life
+					money: 500,
+					score: 0, // 开局时的积分
+					life: 100,
 					waves: [ // 这儿只定义了前 10 波怪物，从第 11 波开始自动生成
 						[],
 						// 第一个参数是没有用的（第 0 波）
