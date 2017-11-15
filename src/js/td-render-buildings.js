@@ -21,7 +21,7 @@ _TD.a.push(function (TD) {
 			y2 = y0;
 			x2 = x1 > x0 ? x0 + len : x0 - len;
 		} else {
-			// 解一元二次方程
+			//Solve a quadratic equation
 			a = (y0 - y1) / (x0 - x1);
 			b = y0 - x0 * a;
 			a2 = a * a + 1;
@@ -186,17 +186,17 @@ _TD.a.push(function (TD) {
 			ctx.closePath();
 			ctx.fill();
 
-			ctx.fillStyle = "#fcc";
-			ctx.beginPath();
-			ctx.arc(b.cx + 3, b.cy - 3, 4 * _TD.retina, 0, Math.PI * 2, true);
-			ctx.closePath();
-			ctx.fill();
+			// ctx.fillStyle = "#fcc";
+			// ctx.beginPath();
+			// ctx.arc(b.cx + 3, b.cy - 3, 4 * _TD.retina, 0, Math.PI * 2, true);
+			// ctx.closePath();
+			// ctx.fill();
 
 		},
 		"wall": function (b, ctx, map, gs, gs2) {
 			ctx.lineWidth = _TD.retina;
-			ctx.fillStyle = "#666";
-			ctx.strokeStyle = "#000";
+			ctx.fillStyle = "#000";
+			ctx.strokeStyle = "#1";
 			ctx.fillRect(b.cx - gs2 + 1, b.cy - gs2 + 1, gs - 1, gs - 1);
 			ctx.beginPath();
 			ctx.moveTo(b.cx - gs2 + 0.5, b.cy - gs2 + 0.5);
